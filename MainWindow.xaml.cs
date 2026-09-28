@@ -8,7 +8,9 @@ namespace Zadanie8
         public MainWindow()
         {
             InitializeComponent();
+            frMain.Navigate(new Task1Page());
         }
+
 
         private void btnTask1_Click(object sender, RoutedEventArgs e)
         {

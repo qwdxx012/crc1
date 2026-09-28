@@ -21,7 +21,10 @@ namespace Zadanie8.Pages
                 return;
             }
 
-            string[] words = text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] words = text.Split(
+    new char[] { ' ', ',', '.', ';', ':', '!', '?', '\t' },
+    StringSplitOptions.RemoveEmptyEntries);
+
 
             if (words.Length == 0)
             {
