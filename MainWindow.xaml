@@ -1,0 +1,41 @@
+<Window x:Class="Zadanie8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Практическая работа. Вариант 8" Height="520" Width="850"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Шапка окна с номером варианта -->
+        <Border Grid.Row="0" Background="#8B00FF">
+            <TextBlock Text="Вариант №8"
+                       Foreground="White"
+                       FontSize="22"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+        </Border>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Меню навигации по задачам -->
+            <StackPanel Grid.Column="0" Background="#EEEEEE" Margin="10">
+                <Button x:Name="btnTask1" Content="Задача 1" Height="40" Margin="0,10,0,0" Click="btnTask1_Click"/>
+                <Button x:Name="btnTask2" Content="Задача 2" Height="40" Margin="0,10,0,0" Click="btnTask2_Click"/>
+                <Button x:Name="btnTask3" Content="Задача 3" Height="40" Margin="0,10,0,0" Click="btnTask3_Click"/>
+                <Button x:Name="btnTask4" Content="Задача 4" Height="40" Margin="0,10,0,0" Click="btnTask4_Click"/>
+                <Button x:Name="btnTask5" Content="Задача 5" Height="40" Margin="0,10,0,0" Click="btnTask5_Click"/>
+            </StackPanel>
+
+            <!-- Область, где отображаются страницы с заданиями -->
+            <Frame x:Name="frMain" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+<Page x:Class="Zadanie8.Pages.Task1Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Задача 1">
+    <StackPanel Margin="20">
+        <TextBlock Text="Задача 1. Словесное описание числа" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,15"
+                   Text="Дано целое число в диапазоне от -999 до 999. Нужно вывести словесное описание этого числа, например: 'отрицательное двузначное число', 'нулевое число', 'положительное однозначное число'."/>
+
+        <TextBlock Text="Введите число:"/>
+        <TextBox x:Name="txtNumber" Width="200" HorizontalAlignment="Left" Margin="0,5,0,10"/>
+
+        <Button x:Name="btnCalculate" Content="Выполнить" Width="120" HorizontalAlignment="Left" Click="btnCalculate_Click"/>
+
+        <TextBlock Text="Результат:" Margin="0,15,0,0"/>
+        <TextBox x:Name="txtResult" Width="400" HorizontalAlignment="Left" Margin="0,5,0,0"
+                 IsReadOnly="True" Background="#F0F0F0"/>
+    </StackPanel>
+</Page>

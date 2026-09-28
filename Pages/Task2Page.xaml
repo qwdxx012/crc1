@@ -1,0 +1,19 @@
+<Page x:Class="Zadanie8.Pages.Task2Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Задача 2">
+    <StackPanel Margin="20">
+        <TextBlock Text="Задача 2. Длина самого длинного слова" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,15"
+                   Text="Дана строка, состоящая из русских слов, разделённых пробелами (одним или несколькими). Нужно определить длину самого длинного слова."/>
+
+        <TextBlock Text="Введите строку:"/>
+        <TextBox x:Name="txtInput" Width="450" HorizontalAlignment="Left" Margin="0,5,0,10"/>
+
+        <Button x:Name="btnCalculate" Content="Выполнить" Width="120" HorizontalAlignment="Left" Click="btnCalculate_Click"/>
+
+        <TextBlock Text="Результат:" Margin="0,15,0,0"/>
+        <TextBox x:Name="txtResult" Width="450" HorizontalAlignment="Left" Margin="0,5,0,0"
+                 IsReadOnly="True" Background="#F0F0F0"/>
+    </StackPanel>
+</Page>
