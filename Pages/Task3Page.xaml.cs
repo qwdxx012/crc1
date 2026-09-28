@@ -1,7 +1,7 @@
 using System;
 using System.Windows;
 using System.Windows.Controls;
-
+using System.Globalization;
 namespace Zadanie8.Pages
 {
     public partial class Task3Page : Page
@@ -33,7 +33,9 @@ namespace Zadanie8.Pages
             for (int i = 0; i < parts.Length; i++)
             {
                 double value;
-                bool isNumber = double.TryParse(parts[i], out value);
+                string normalized = parts[i].Replace(',', '.');
+                bool isNumber = double.TryParse(normalized, NumberStyles.Float,
+                    CultureInfo.InvariantCulture, out value);
 
                 if (!isNumber)
                 {
