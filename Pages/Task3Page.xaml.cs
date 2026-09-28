@@ -35,7 +35,7 @@ namespace Zadanie8.Pages
                 double value;
                 string normalized = parts[i].Replace(',', '.');
                 bool isNumber = double.TryParse(normalized, NumberStyles.Float,
-                    CultureInfo.InvariantCulture, out value);
+                   CultureInfo.InvariantCulture, out value);
 
                 if (!isNumber)
                 {
